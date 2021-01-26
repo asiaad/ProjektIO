@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 import sys
 
 def create_df():
-    df = pd.read_excel("C:\\Users\\asiaa\\Desktop\\Belgium.xlsx")
+    df = pd.read_excel(str(pathlib.Path().absolute())+"\\Belgium.xlsx")
     return df
 
 def arima_model(df):
@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
         #
         etykieta3 = QLabel(self)
         etykieta3.setGeometry(0, 0, 1500, 1500)
-        etykieta3.setStyleSheet("background-image: url(belgium-flag.jpg);")  # zmiana zdj
+        etykieta3.setStyleSheet("background-image: url(photo2.jpg);")  # zmiana zdj
         self.interfejs()
 
     def do_plot(self):
